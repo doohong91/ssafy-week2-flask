@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+           
+    </head>
+    <body>
+        <h1>네이버 웹툰 모아보기</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Thumbnail</th>
+                    <th>Title</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in t%}
+                <tr>
+                    <td>
+                        <img src = "{{i['img']}}">
+                        </td>
+                    <td>{{i['title']}}</td>
+                    <td>
+                        <a href = "{{i['url']}}">
+                            보러가기
+                        </a>    
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
